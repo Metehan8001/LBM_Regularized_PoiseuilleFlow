@@ -33,7 +33,7 @@ end subroutine
 !----------------------------------------------------------------------------
 subroutine outlet_pressure() ! pressure boundary condition
 	use vars
-	real rho_out
+	real (kind = 8) rho_out
 	rho_out=0.8
 	i=ied
 	do j=1,jed
@@ -46,7 +46,7 @@ end subroutine
 !----------------------------------------------------------------------------
 subroutine bouncebk 
 	use vars
-	integer i,j,k
+	integer (kind = 4) i,j,k
 ! lower	
 	j=1
 	do i=1,ied-1

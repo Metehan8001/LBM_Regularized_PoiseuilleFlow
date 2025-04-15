@@ -1,6 +1,6 @@
 subroutine streaming 
 	use vars
-	integer i,j,k
+	integer (kind = 4) i,j,k
 	
 ! direction -> x+	
 	do i=ied,2,-1

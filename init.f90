@@ -1,7 +1,7 @@
 subroutine init() 
 	use vars
 	use io_parameters
-	integer i,j
+	integer (kind = 4) i,j
 	open(10,file="control.in")
 	read(10,*) ied,jed,dx,dt
 	read(10,*) t_end,kstep_save,kstep_view,file_format

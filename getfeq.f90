@@ -1,6 +1,6 @@
 subroutine getFeq()
 use vars
-integer i,j,k,l,m,n
+integer (kind = 4) i,j,k
 
 
 do i=1,ied
@@ -36,8 +36,8 @@ end subroutine
 
 subroutine getFeqAt(i,j,rho2,u2,v2) 
 use vars
-integer i,j,k
-real uv
+integer (kind = 4) i,j,k
+real (kind=8) uv
 	uv=u2**2+v2**2
 	do k=0,Q
 		eu=ei(k,1)*u2+ei(k,2)*v2

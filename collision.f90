@@ -1,6 +1,6 @@
 subroutine collision 
 	use vars
-	integer i,j,k
+	integer (kind = 4) i,j,k
 	do i=1,ied
 	do j=1,jed
 	do k=0,Q

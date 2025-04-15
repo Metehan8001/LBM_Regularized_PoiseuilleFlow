@@ -1,6 +1,6 @@
 program main
 use vars
-integer kstep
+integer (kind = 4) kstep
 call init()
 tt=0.0
 kstep=1
@@ -21,7 +21,7 @@ end program
 !----------------------------------------------------------------------------
 subroutine getMacro() 
 use vars
-integer i,j,k
+integer (kind = 4) i,j,k
 
 do i=1,ied
 do j=1,jed

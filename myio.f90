@@ -1,6 +1,6 @@
 subroutine output(kstep)
 use io_parameters
-integer kstep
+integer (kind = 4) kstep
 if (mod(kstep,kstep_view)==0) then
 	print *, "step=",kstep
 endif
@@ -15,7 +15,7 @@ subroutine output_tecplot(kstep) ! 输出几何及物理量 （tecplot格式）
 use vars
 use io_parameters
 character*50 num2char,filename
-integer kstep
+integer (kind = 4) kstep
 filename=trim(output_filename)
 call NumToChar(kstep, num2char, len(num2char))
 filename=trim(filename)//trim(num2char)//".dat"
